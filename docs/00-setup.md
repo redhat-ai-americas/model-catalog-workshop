@@ -85,6 +85,12 @@ If the pods are running as expected and the catalog still isn't showing up in th
     oc rollout restart deployment/rhods-dashboard -n redhat-ods-applications
     oc get pods -n redhat-ods-applications -l app=rhods-dashboard -w
 
+> Expected output:
+> 
+> deployment.apps/rhods-dashboard restarted
+> `NAME                               READY   STATUS    RESTARTS   AGE`\
+> rhods-dashboard-7f7586f857-968kd    4/4     Running   0          11s
+
 <p align="center">
 <a href="/README.md">Prev</a>
 &nbsp;&nbsp;&nbsp;

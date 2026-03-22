@@ -1,4 +1,4 @@
-# 1. Add a model registry
+# 1. Create a model registry
 
 <p align="center">
 <a href="/docs/00-setup.md">Prev</a>
@@ -71,6 +71,10 @@
 > `NAME                         READY   STATUS    RESTARTS   AGE`\
 > `...`\
 > `myregistry-79699fbf6-rwlhx   2/2     Running   0          15s`
+
+You can further validate the registry is working by finding the registry page in OpenShift AI.
+
+![](/assets/empty-registry.png)
 
 ## Automation key (catch up)
 
