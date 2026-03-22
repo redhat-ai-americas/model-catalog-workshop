@@ -22,12 +22,16 @@
 
 - [ ] Get the default model catalog file to use as a base for our changes
 
+Execute the following commands in a terminal
+
     POD_NAME=$(oc get pods -n rhoai-model-registries -l app.kubernetes.io/name=model-catalog -o name)
     oc exec -n rhoai-model-registries $POD_NAME -c catalog -- cat /shared-data/validated-models-catalog.yaml > scratch/validated-models-catalog.yaml
 
 This command will have no expected output.
 
 - [ ] Add the GPT-OSS-20b-essential variant model to the model catalog.
+
+Run the following commands in a terminal
 
     yq '.models.[] | select(.name == "RedHatAI/gpt-oss-120b")' scratch/validated-models-catalog.yaml > scratch/new-model.yaml
     yq -i '.name = "gpt-oss-20b-essential"' scratch/new-model.yaml
@@ -39,6 +43,8 @@ This command will have no expected output.
 
 - [ ] Prepare the model for insertion into the ConfigMap.
 
+Run the following in a shell
+
     touch scratch/model-for-configmap.yaml
     yq -i '.source = "Organization AI"' scratch/model-for-configmap.yaml
     yq -i '.models = [load("scratch/new-model.yaml")]' scratch/model-for-configmap.yaml
@@ -46,6 +52,8 @@ This command will have no expected output.
 This command will have no expected output.
 
 - [ ] Get the custom model catalog ConfigMap locally for updates
+
+Execute the following commands
 
     oc get configmap model-catalog-sources -n rhoai-model-registries -o yaml > scratch/model-catalog-sources.yaml
     cp scratch/model-catalog-sources.yaml scratch/new-model-catalog-sources.yaml
@@ -64,6 +72,8 @@ There is no expected output from this command, but verify that `scratch/new-mode
 
 - [ ] Update the ConfigMap on the cluster with your new values
 
+Run the following to replace the existing ConfigMap with our new one
+
     oc replace configmap -n rhoai-model-registries -f scratch/new-model-catalog-sources.yaml
 
 > Expected output:
@@ -71,6 +81,8 @@ There is no expected output from this command, but verify that `scratch/new-mode
 > configmap/model-catalog-sources replaced
 
 - [ ] Restart the model catalog deployment to get it to pick up the new catalog.
+
+Run the following to restart the model catalog and watch it come back up
 
     oc rollout restart deployment/model-catalog -n rhoai-model-registries
     oc get pods -n rhoai-model-registries -l app.kubernetes.io/name=model-catalog -w
