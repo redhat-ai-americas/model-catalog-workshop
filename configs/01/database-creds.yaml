@@ -4,9 +4,7 @@ metadata:
   name: myregistry-registry
   namespace: rhoai-model-registries
 data:
-  database-name: cmVnaXN0cnk=
   database-password: bXlwYXNzd29yZA==
-  database-user: bXl1c2Vy
 type: Opaque
 ---
 kind: Secret
