@@ -58,7 +58,7 @@ oc login <openshift_cluster_url> -u <admin_username> -p <password>
 
 The model catalog and registries appear in the AI Hub section of the OpenShift AI console:
 
-![](/assets/console-catalog-registry)
+![](/assets/console-catalog-registry.png)
 
 If the model catalog isn't showing up in the OpenShift AI catalog, that means the model registries aren't enabled in OpenShift AI. You can verify that the model catalog is running by executing the following command
 

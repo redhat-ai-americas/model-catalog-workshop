@@ -40,8 +40,8 @@
 
 > Expected output
 > 
-> `persistentvolumeclaim/mysql created`
-> `service/mysql created`
+> `persistentvolumeclaim/mysql created`\
+> `service/mysql created`\
 > `deployment.apps/mysql created`
 
 - [ ] Verify the database is running and available
