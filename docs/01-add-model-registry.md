@@ -32,9 +32,7 @@
 
 - [ ] Deploy the MySQL database
 
-> [!WARNING]
-> Native password authentication is required for this step. For the version of MySQL we're using in this workshop, the command line argument is\
-> `--default-authentication-plugin=mysql_native_password`
+Create a MySQL deployment, service, and persistent storage for the data.
 
       oc apply -f configs/01/mysql.yaml
 
