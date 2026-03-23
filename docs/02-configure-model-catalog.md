@@ -37,7 +37,7 @@ Run the following commands in a terminal
     yq -i '.name = "gpt-oss-20b-essential"' scratch/new-model.yaml
     yq -i '.provider = "OpenAI by way of Red Hat"' scratch/new-model.yaml
     yq -i '.description = "This is a Red Hat packaged version of gpt-oss that streamlines the model architecture to just the essential files necessary to run the model in vLLM."' scratch/new-model.yaml
-    yq -i '.artifacts[0].uri = "oci://registry.redhat.io/rhai1/modelcar-gpt-oss-20b-essential:3.0"' scratch/new-model.yaml
+    yq -i '.artifacts[0].uri = "oci://registry.redhat.io/rhai/modelcar-gpt-oss-20b-essential:3.0"' scratch/new-model.yaml
 
 This command will have no expected output.
 
