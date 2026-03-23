@@ -3,7 +3,7 @@
 <p align="center">
 <a href="/docs/02-configure-model-catalog.md">Prev</a>
 &nbsp;&nbsp;&nbsp;
-<a href="/docs/03-register-from-catalog.md">Next</a>
+<a href="/docs/04-deploy-from-registry.md">Next</a>
 </p>
 
 ### Objectives
@@ -57,5 +57,5 @@ From now on, if you navigate to the Model Registry in the sidenav, rather than s
 <p align="center">
 <a href="/docs/02-configure-model-catalog.md">Prev</a>
 &nbsp;&nbsp;&nbsp;
-<a href="/docs/03-register-from-catalog.md">Next</a>
+<a href="/docs/04-deploy-from-registry.md">Next</a>
 </p>
