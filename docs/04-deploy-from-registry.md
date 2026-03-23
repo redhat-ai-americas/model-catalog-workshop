@@ -3,7 +3,7 @@
 <p align="center">
 <a href="/docs/03-register-from-catalog.md">Prev</a>
 &nbsp;&nbsp;&nbsp;
-<a href="/docs/04-deploy-from-registry.md">Next</a>
+<a href="/docs/05-model-archival.md">Next</a>
 </p>
 
 ### Objectives
@@ -79,5 +79,5 @@ Depending on whether you are looking at the model overall or the specific model 
 <p align="center">
 <a href="/docs/03-register-from-catalog.md">Prev</a>
 &nbsp;&nbsp;&nbsp;
-<a href="/docs/04-deploy-from-registry.md">Next</a>
+<a href="/docs/05-model-archival.md">Next</a>
 </p>
