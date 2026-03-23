@@ -108,7 +108,7 @@ When you click into the catalog, you should see that your new catalog `My models
 - [ ] From this repository's root directory, run below command
 
 ```sh
-./scripts/setup.sh -s 1
+./scripts/setup.sh -s 2
 ```
 
 <p align="center">
