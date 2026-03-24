@@ -27,3 +27,11 @@ spec:
       maxCount: 1
       minCount: 1
       resourceType: Accelerator
+  scheduling:
+    node:
+      nodeSelector: {}
+      tolerations:
+        - effect: NoSchedule
+          key: nvidia.com/gpu
+          operator: Exists
+    type: Node
