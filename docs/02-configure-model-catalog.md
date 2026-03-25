@@ -89,7 +89,7 @@ Run the following to restart the model catalog and watch it come back up
 
 > Expected output:
 > 
-> deployment.apps/model-catalog restarted
+> deployment.apps/model-catalog restarted\
 > `NAME                            READY   STATUS    RESTARTS   AGE`\
 > model-catalog-b59948797-s4fvj    2/2     Running   0          11s
 
