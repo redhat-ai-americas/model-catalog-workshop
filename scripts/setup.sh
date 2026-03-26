@@ -69,7 +69,12 @@ step_0(){
 
   retry oc apply -f "${GIT_ROOT}"/configs/00/web-terminal-subscription.yaml
 
-  retry INSTALL_PLAN=$(oc get installplan -n openshift-operators -o json | jq '.items[] | select(.spec.clusterServiceVersionNames[] | contains  ("web-terminal")) | .metadata.name' | tr -d \")
+  while [ -z "$INSTALL_PLAN" ]
+  do
+    INSTALL_PLAN=$(oc get installplan -n openshift-operators -o json | jq '.items[] | select(.spec.clusterServiceVersionNames[] | contains  ("web-terminal")) | .metadata.name' | tr -d \")
+  done
+  log $INSTALL_PLAN
+
   retry oc patch installplan $INSTALL_PLAN \
     --namespace openshift-operators \
     --type merge \
